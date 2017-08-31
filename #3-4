@@ -1,0 +1,216 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Алгоритмы классификации (продолжение)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# применить решающий лес\n",
+    "# http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html\n",
+    "# нарисовать график зависимости ошибки перекрестной проверки на тестовой части от числа деревьев (n_estimators). \n",
+    "# Что означают и как влияют параметры criterion, max_depth, min_samples_split, min_samples_leaf ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# применить бустинг\n",
+    "# http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html\n",
+    "# какие параметры и как влияют на качество классификации?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Сделайте выводы о лучшем методе, среди рассмотренных на занятии 2 и 3."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Работа с бинарными изображениями\n",
+    "## с помощью библиотеки http://scikit-image.org"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# бинаризовать изображения, привести примеры картинок\n",
+    "# http://scikit-image.org/docs/dev/auto_examples/xx_applications/plot_thresholding.html"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# выбрать несколько типичных изображений цифр и несколько не типичных (разомнутую 6, не связные из-за шума и т.п.)\n",
+    "# применить к ним замыкание и размыкание в разных вариантах и порядке\n",
+    "# выбрать наилучший вариант визуально, применить его ко всей выборке\n",
+    "# http://scikit-image.org/docs/dev/api/skimage.morphology.html"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# построить скелеты изображений\n",
+    "# визуально выбрать лучшие параметры (skeletonize, medial_axis)\n",
+    "# нарисовать примеры результатов"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# сгенерировать признаки по изображениям и их склетам (площадь, запас связности, ширина и т.д.)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# добавить ваши признаки к признаковому описанию и применить решающие дереья. Сравнить результат с результатом с занятия 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Метод главных компонент"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# найти среднее изображение"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# вычислить матрицу выборочной ковариации (сигма). Каково она размера?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# вычислить собственные векторы и собственные числа матрицы сигма. \n",
+    "# Упорядочить их так, чтобы они располагались в порядке невозрастания собственных чисел,\n",
+    "# а собственные векторы были расположены по столбцу"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# по графику кумулятивной суммы собственных чисел дать рекомендации по выбору размерности (0.9; 0.95; 0.99)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# нарисовать проекции нескольких цифр на аффинные пространства реккомендованной размерности. \n",
+    "# Нарисовать проекции на пространства меньшей и большей размерности"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Применить решающие деревья к выборке меньшей размерности (признаки --- главные координаты)\n",
+    "# Как изменилось качество?"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
